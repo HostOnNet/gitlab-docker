@@ -28,6 +28,8 @@ RUN mkdir /tmp/ruby;\
   cd /tmp/ruby;\
   curl ftp://ftp.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p247.tar.gz | tar xz;\
   cd ruby-2.0.0-p247;\
+  wget https://gist.githubusercontent.com/neeravkumar/f2409a4a2397c7cf6a61/raw/8a3f2e99d9f3853f91b942727defd052c12a0a80/gistfile1.diff;\
+  patch -p1 < gistfile1.diff;\  
   chmod +x configure;\
   ./configure;\
   make;\
